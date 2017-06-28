@@ -26,10 +26,10 @@ compute_learning_sessions <- function(logs){
               activity.time.total = sum(time.before_next),
               count.activity = n_distinct(activity.id))
 }
-actses <- compute_learning_sessions(logs)
+activitySessions <- compute_learning_sessions(logs)
 
 # Write to csv
-write.table(actses,
+write.table(activitySessions,
             sep = ",",
             row.names = FALSE,
             file = URL)
